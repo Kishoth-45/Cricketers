@@ -16,7 +16,7 @@ const Userdata = [
     online: true,
     country: 'INDIA',
     role: 'Batsman',
-    image: '/Images/Virat.jpg',
+    image: 'Images/Virat.jpg',
     coverimage: 'Images/Viratcover.jpg'
   },
   {
