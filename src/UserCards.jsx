@@ -8,7 +8,7 @@ const Userdata = [
     online: true,
     country: 'INDIA',
     role: 'Captain Batsman',
-    image: '/Images/Rohit.jpg',
+    image: 'Images/Rohit.jpg',
     coverimage: 'Images/Rohitcover.jpg'
   },
   {
