@@ -111,14 +111,14 @@ function User(props) {
         <img src={props.image} alt='user' className='cricketers' />
         <div className='name-div'>
           <h3>{props.playername}</h3>
-          <img src='/Images/Verified.png' alt='logo' className='verified' />
+          <img src='Images/Verified.png' alt='logo' className='verified' />
         </div>
         <h3 className='india'>{props.country}</h3>
         <h4>{props.role}</h4>
         <div className='buttons'>
           <button className='message'>
             <div className='name-div'>
-              <img src='/Images/messenger.png' alt='logo' className='messenger' />
+              <img src='Images/messenger.png' alt='logo' className='messenger' />
               <span>Message</span>
             </div>
           </button>
