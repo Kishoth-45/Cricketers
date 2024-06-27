@@ -8,7 +8,7 @@ const Userdata = [
     online: true,
     country: 'INDIA',
     role: 'Captain Batsman',
-    image: '/Images/Rohit.jpg',
+    image: 'Images/Rohit.jpg',
     coverimage: 'Images/Rohitcover.jpg'
   },
   {
@@ -16,7 +16,7 @@ const Userdata = [
     online: true,
     country: 'INDIA',
     role: 'Batsman',
-    image: '/Images/Virat.jpg',
+    image: 'Images/Virat.jpg',
     coverimage: 'Images/Viratcover.jpg'
   },
   {
@@ -24,7 +24,7 @@ const Userdata = [
     online: false,
     country: 'INDIA',
     role: 'Batsman (WK)',
-    image: '/Images/Dhoni.jpg',
+    image: 'Images/Dhoni.jpg',
     coverimage: 'Images/Dhonicover.jpg'
   },
   {
@@ -32,7 +32,7 @@ const Userdata = [
     online: false,
     country: 'INDIA',
     role: 'Batsman',
-    image: '/Images/Sachin.jpg',
+    image: 'Images/Sachin.jpg',
     coverimage: 'Images/Sachincover.jpg'
   },
   {
@@ -40,7 +40,7 @@ const Userdata = [
     online: true,
     country: 'INDIA',
     role: 'Bowler',
-    image: '/Images/Bumrah.jpg',
+    image: 'Images/Bumrah.jpg',
     coverimage: 'Images/Bumrahcover.jpg'
   },
   {
@@ -48,7 +48,7 @@ const Userdata = [
     online: true,
     country: 'INDIA',
     role: 'All Rounder',
-    image: '/Images/Hardik.jpg',
+    image: 'Images/Hardik.jpg',
     coverimage: 'Images/Hardikcover.jpg'
   },
   {
@@ -56,7 +56,7 @@ const Userdata = [
     online: true,
     country: 'INDIA',
     role: 'Batsman',
-    image: '/Images/Smriti.jpg',
+    image: 'Images/Smriti.jpg',
     coverimage: 'Images/Smriticover1.jpg'
   },
   {
@@ -64,7 +64,7 @@ const Userdata = [
     online: true,
     country: 'INDIA',
     role: 'Captain Batsman',
-    image: '/Images/Harman.jpg',
+    image: 'Images/Harman.jpg',
     coverimage: 'Images/Harmancover.jpg'
   },
   {
@@ -72,7 +72,7 @@ const Userdata = [
     online: true,
     country: 'INDIA',
     role: 'Batsman',
-    image: '/Images/Sky.jpg',
+    image: 'Images/Sky.jpg',
     coverimage: 'Images/Skycover.jpg'
   },
 ];
