@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import User from './User';
 import './index.css';
 
-const Userdata = [
+const Userdata=[
   {
     playername: 'Rohit Sharma',
     online: true,
     country: 'INDIA',
     role: 'Captain Batsman',
     image: 'Images/Rohit.jpg',
-    coverimage: 'Images/Rohitcover.jpg'
+    coverimage: 'Images/Rohitcover.jpg',
+    gender: 'man',
   },
   {
     playername: 'Virat Kohli',
@@ -17,7 +19,8 @@ const Userdata = [
     country: 'INDIA',
     role: 'Batsman',
     image: 'Images/Virat.jpg',
-    coverimage: 'Images/Viratcover.jpg'
+    coverimage: 'Images/Viratcover.jpg',
+    gender: 'man',
   },
   {
     playername: 'MS Dhoni',
@@ -25,7 +28,8 @@ const Userdata = [
     country: 'INDIA',
     role: 'Batsman (WK)',
     image: 'Images/Dhoni.jpg',
-    coverimage: 'Images/Dhonicover.jpg'
+    coverimage: 'Images/Dhonicover.jpg',
+    gender: 'man',
   },
   {
     playername: 'Sachin Tendulkar',
@@ -33,23 +37,26 @@ const Userdata = [
     country: 'INDIA',
     role: 'Batsman',
     image: 'Images/Sachin.jpg',
-    coverimage: 'Images/Sachincover.jpg'
+    coverimage: 'Images/Sachincover.jpg',
+    gender: 'man',
   },
   {
-    playername: 'Jasprit Bumrah',
+    playername: 'Pat Cummins',
     online: true,
-    country: 'INDIA',
-    role: 'Bowler',
-    image: 'Images/Bumrah.jpg',
-    coverimage: 'Images/Bumrahcover.jpg'
+    country: 'Australia',
+    role: 'Captain Bowler',
+    image: 'Images/Cummins.jpg',
+    coverimage: 'Images/Cumminscover.jpg',
+    gender: 'man',
   },
   {
-    playername: 'Hardik Pandya',
-    online: true,
+    playername: 'Mithali Raj',
+    online: false,
     country: 'INDIA',
-    role: 'All Rounder',
-    image: 'Images/Hardik.jpg',
-    coverimage: 'Images/Hardikcover.jpg'
+    role: 'Batsman',
+    image: 'Images/Mithali.jpg',
+    coverimage: 'Images/Mithalicover.jpg',
+    gender: 'women',
   },
   {
     playername: 'Smriti Mandhana',
@@ -57,7 +64,8 @@ const Userdata = [
     country: 'INDIA',
     role: 'Batsman',
     image: 'Images/Smriti.jpg',
-    coverimage: 'Images/Smriticover1.jpg'
+    coverimage: 'Images/Smriticover1.jpg',
+    gender: 'women',
   },
   {
     playername: 'Harman Preet Kaur',
@@ -65,82 +73,149 @@ const Userdata = [
     country: 'INDIA',
     role: 'Captain Batsman',
     image: 'Images/Harman.jpg',
-    coverimage: 'Images/Harmancover.jpg'
+    coverimage: 'Images/Harmancover.jpg',
+    gender: 'women',
   },
   {
-    playername: 'Surya Kumar Yadhav',
+    playername: 'Kane Williamson',
+    online: true,
+    country: 'NewZealand',
+    role: 'Captain Batsman',
+    image: 'Images/Williamson.jpg',
+    coverimage: 'Images/Williamsoncover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'Ben Stokes',
+    online: true,
+    country: 'England',
+    role: 'All Rounder',
+    image: 'Images/Stokes.jpg',
+    coverimage: 'Images/Stokescover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'Jasprit Bumrah',
+    online: true,
+    country: 'INDIA',
+    role: 'Bowler',
+    image: 'Images/Bumrah.jpg',
+    coverimage: 'Images/Bumrahcover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'Kieron Pollard',
+    online: false,
+    country: 'WESTINDIES',
+    role: 'Batsman',
+    image: 'Images/Pollard.jpg',
+    coverimage: 'Images/Pollardcover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'Hardik Pandya',
+    online: true,
+    country: 'INDIA',
+    role: 'All Rounder',
+    image: 'Images/Hardik.jpg',
+    coverimage: 'Images/Hardikcover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'Meg Lanning',
+    online: true,
+    country: 'Australia',
+    role: 'Captain, Batsman',
+    image: 'Images/Meg.jpg',
+    coverimage: 'Images/Megcover.jpg',
+    gender: 'women',
+  },
+  {
+    playername: 'David Warner',
+    online: true,
+    country: 'Australia',
+    role: 'Batsman',
+    image: 'Images/Warner.jpg',
+    coverimage: 'Images/Warnercover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'Trent Boult',
+    online: true,
+    country: 'NewZealand',
+    role: 'Bowler',
+    image: 'Images/Boult.jpg',
+    coverimage: 'Images/Boultcover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'James Anderson',
+    online: false,
+    country: 'England',
+    role: 'Bowler',
+    image: 'Images/Anderson.jpg',
+    coverimage: 'Images/Andersoncover.jpg',
+    gender: 'man',
+  },
+
+  {
+    playername: 'Steven Smith',
+    online: true,
+    country: 'Australia',
+    role: 'Batsman',
+    image: 'Images/Smith.jpg',
+    coverimage: 'Images/Smithcover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'Sunil Narine',
+    online: false,
+    country: 'WESTINDIES',
+    role: 'All Rounder',
+    image: 'Images/Narine.jpg',
+    coverimage: 'Images/Narinecover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'Surya Kumar Yadav',
     online: true,
     country: 'INDIA',
     role: 'Batsman',
     image: 'Images/Sky.jpg',
-    coverimage: 'Images/Skycover.jpg'
+    coverimage: 'Images/Skycover.jpg',
+    gender: 'man',
   },
-];
+  {
+    playername: 'Nicholas Pooran',
+    online: true,
+    country: 'WESTINDIES',
+    role: 'Batsman (WK)',
+    image: 'Images/Pooran.jpg',
+    coverimage: 'Images/Poorancover.jpg',
+    gender: 'man',
+  },
+  {
+    playername: 'Amelia Kerr',
+    online: true,
+    country: 'NewZealand',
+    role: 'All Rounder',
+    image: 'Images/Amelia.jpg',
+    coverimage: 'Images/Ameliacover.jpg',
+    gender: 'women',
+  },
+  {
+    playername: 'Ellyse Perry',
+    online: true,
+    country: 'Australia',
+    role: 'All Rounder',
+    image: 'Images/Perry.jpg',
+    coverimage: 'Images/Perrycover.jpg',
+    gender: 'women',
+  },
+]
 
-function User(props) {
-  useEffect(() => {
-    const followButtons = document.querySelectorAll('.follow');
 
-    followButtons.forEach((follow) => {
-      follow.addEventListener('click', (event) => {
-        event.preventDefault();
-        follow.classList.toggle('following');
-
-        if (follow.classList.contains('following')) {
-          follow.innerHTML = '<i class="bi bi-check-square-fill"></i> Following';
-        } else {
-          follow.innerHTML = '<i class="bi bi-check-square-fill"></i> Follow';
-        }
-      });
-    });
-
-    return () => {
-      followButtons.forEach((follow) => {
-        follow.removeEventListener('click', () => {});
-      });
-    };
-  }, []);
-
-  return (
-    <div>
-      <div className='usercard-div'>
-        <p className={props.online ? 'status online' : 'status offline'}>
-          {props.online ? 'Online' : 'Offline'}
-        </p>
-        <img src={props.coverimage} alt="coverimg" className='cover-image' />
-        <img src={props.image} alt='user' className='cricketers' />
-        <div className='name-div'>
-          <h3>{props.playername}</h3>
-          <img src='Images/Verified.png' alt='logo' className='verified' />
-        </div>
-        <h3 className='india'>{props.country}</h3>
-        <h4>{props.role}</h4>
-        <div className='buttons'>
-          <button className='message'>
-            <div className='name-div'>
-              <img src='Images/messenger.png' alt='logo' className='messenger' />
-              <span>Message</span>
-            </div>
-          </button>
-          <button className='follow'>
-            <i className='bi bi-check-square-fill'></i> Follow
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-User.propTypes = {
-  playername: PropTypes.string.isRequired,
-  country: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  coverimage: PropTypes.string.isRequired,
-  online: PropTypes.bool.isRequired,
-};
-
-export const UserCard = ({ filter }) => {
+export const UserCard = ({ filter, onMessageClick }) => {
   const [filteredUsers, setFilteredUsers] = useState(Userdata);
 
   useEffect(() => {
@@ -148,29 +223,34 @@ export const UserCard = ({ filter }) => {
     const filtered = Userdata.filter((user) =>
       user.playername.toLowerCase().includes(lowerCaseFilter) ||
       user.country.toLowerCase().includes(lowerCaseFilter) ||
-      user.role.toLowerCase().includes(lowerCaseFilter)
-      );
-      setFilteredUsers(filtered);
-    }, [filter]);
-  
-    return (
-      <>
-        {filteredUsers.map((user, index) => (
-          <User
-            key={index}
-            playername={user.playername}
-            country={user.country}
-            online={user.online}
-            image={user.image}
-            coverimage={user.coverimage}
-            role={user.role}
-          />
-        ))}
-      </>
+      user.role.toLowerCase().includes(lowerCaseFilter) ||
+      user.gender.toLowerCase().includes(lowerCaseFilter)
     );
-  };
-  
-  UserCard.propTypes = {
-    filter: PropTypes.string.isRequired,
-  };
-  
+    setFilteredUsers(filtered);
+  }, [filter]);
+
+  return (
+    <>
+      {filteredUsers.map((user, index) => (
+        <User
+          key={index}
+          playername={user.playername}
+          country={user.country}
+          online={user.online}
+          image={user.image}
+          gender={user.gender}
+          coverimage={user.coverimage}
+          role={user.role}
+          onMessageClick={onMessageClick}
+        />
+      ))}
+    </>
+  );
+};
+
+UserCard.propTypes = {
+  filter: PropTypes.string.isRequired,
+  onMessageClick: PropTypes.func.isRequired,
+};
+
+ 
