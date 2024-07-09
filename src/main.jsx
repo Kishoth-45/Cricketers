@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom/client";
+import { Link } from "react-router-dom";
 import { UserCard } from "./UserCards";
 import './index.css';
 
@@ -61,27 +62,56 @@ const App = () => {
     const offcanvas = document.querySelector('.offcanvas');
     const cancel = document.querySelector('.cancel');
     const bodytag = document.querySelector('.usercard');
+    const searchicon = document.querySelector('.search-icon');
+    const searchbox = document.querySelector('.search-box');
+    const backarrow = document.querySelector('.back-arrow');
+    const brand = document.querySelector('.navbar-brand');
 
-    if (menu && offcanvas && cancel && bodytag) {
-      menu.addEventListener('click', () => {
+    const handleMenuClick = () => {
         offcanvas.classList.toggle('offcanvas-show');
-      });
+    };
 
-      cancel.addEventListener('click', () => {
+    const handleCancelClick = () => {
         offcanvas.classList.toggle('offcanvas-show');
-      });
+    };
 
-      bodytag.addEventListener('click', () => {
+    const handleBodyClick = () => {
         offcanvas.classList.remove('offcanvas-show');
-      });
+    };
+
+    const handleSearchIconClick = () => {
+        searchicon.classList.add('nav-hide');
+        brand.classList.add('nav-hide');
+        menu.classList.add('nav-hide');
+        searchbox.classList.add('nav-show');
+        backarrow.classList.add('nav-show');
+    };
+
+    const handleBackArrowClick = () => {
+        searchicon.classList.remove('nav-hide');
+        brand.classList.remove('nav-hide');
+        menu.classList.remove('nav-hide');
+        searchbox.classList.remove('nav-show');
+        backarrow.classList.remove('nav-show');
+    };
+
+    if (menu && offcanvas && cancel && bodytag && searchicon && searchbox && backarrow && brand) {
+        menu.addEventListener('click', handleMenuClick);
+        cancel.addEventListener('click', handleCancelClick);
+        bodytag.addEventListener('click', handleBodyClick);
+        searchicon.addEventListener('click', handleSearchIconClick);
+        backarrow.addEventListener('click', handleBackArrowClick);
     }
 
     return () => {
-      if (menu) menu.removeEventListener('click', () => {});
-      if (cancel) cancel.removeEventListener('click', () => {});
-      if (bodytag) bodytag.removeEventListener('click', () => {});
+        if (menu) menu.removeEventListener('click', handleMenuClick);
+        if (cancel) cancel.removeEventListener('click', handleCancelClick);
+        if (bodytag) bodytag.removeEventListener('click', handleBodyClick);
+        if (searchicon) searchicon.removeEventListener('click', handleSearchIconClick);
+        if (backarrow) backarrow.removeEventListener('click', handleBackArrowClick);
     };
-  }, []);
+}, []);
+
 
   useEffect(() => {
     const msgcancel = document.querySelector('.msg-cancel');
@@ -115,13 +145,23 @@ const App = () => {
       <div className='navbar'>
         <div className="menu"><i className="bi bi-list"></i></div>
         <div className='navbar-brand'>CRICKETERS</div>
+        <div className="back-arrow"> <ion-icon name="arrow-back-sharp"></ion-icon> </div>
+        <div className="search-icon"> <i className="bi bi-search"></i> </div>
         <div className='search-box'>
+          <div className="search-box-content">
+          <div>
           <input
             type="text"
-            placeholder="Search by player name, country, or role"
+            placeholder="Search by player name, country, role or gender"
             value={filter}
             onChange={handleFilterChange}
-          />
+          /> 
+          </div>
+          <div>
+          <i class="bi bi-x search-cancel"  onClick={() => handleFilterItemClick('')} ></i>
+          </div>
+          </div>
+          
         </div>
       </div>
       <div className="offcanvas">
@@ -131,6 +171,9 @@ const App = () => {
         </div>
         <div className="canva-content">
           <div>
+            <div className="allplayers" onClick={() => handleFilterItemClick('')}>
+            <i class="bi bi-stars"></i>All players
+            </div>
             <div className="canva-country">
               <i className="fa fa-chevron-right"></i> Country
             </div>
@@ -175,7 +218,7 @@ const App = () => {
                 <div><img src={selectedUser.image} alt="." /></div>
                 <div>
                   <h3>{selectedUser.playername}</h3>
-                  <h4>{selectedUser.country}</h4>
+                  <h4 className={selectedUser.country.toLowerCase()}>{selectedUser.country}</h4>
                 </div>
               </div>
               <div className="msg-cancel"><i className="bi bi-x"></i></div>
@@ -183,9 +226,22 @@ const App = () => {
              
             <div className="msg-content">
               {messages[selectedUser.playername]?.map((message, index) => (
-                <div key={index}>
+                <div key={index} className="msg-index">
+                  <div className="msg-msg-body">
                   <div className="msg-msg">{message.content}</div>
                   <div className="msg-time">{message.time}</div>
+                  </div>
+                  <div className="automatic-msg">
+                  <div className="automatic">Hey Friend! I am {selectedUser.playername} <br />
+                   You Want to know more about me <br />
+                   <div className="social">
+                   <a href={selectedUser.facebook} target="_blank" rel="noopener noreferrer" className="social-fb"> <i class="bi bi-facebook"></i> </a> 
+                   <a href={selectedUser.instagram} target="_blank" rel="noopener noreferrer" className="social-insta"> <i class="bi bi-instagram"></i> </a>
+                   </div></div>
+                  <div className="msg-time">{message.time}</div>
+
+                  </div>
+                  
                 </div>
               ))}
             </div>

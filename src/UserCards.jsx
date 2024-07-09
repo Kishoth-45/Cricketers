@@ -12,6 +12,8 @@ const Userdata=[
     image: 'Images/Rohit.jpg',
     coverimage: 'Images/Rohitcover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Virat Kohli',
@@ -21,6 +23,8 @@ const Userdata=[
     image: 'Images/Virat.jpg',
     coverimage: 'Images/Viratcover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'MS Dhoni',
@@ -30,6 +34,8 @@ const Userdata=[
     image: 'Images/Dhoni.jpg',
     coverimage: 'Images/Dhonicover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Sachin Tendulkar',
@@ -39,6 +45,8 @@ const Userdata=[
     image: 'Images/Sachin.jpg',
     coverimage: 'Images/Sachincover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Pat Cummins',
@@ -48,6 +56,8 @@ const Userdata=[
     image: 'Images/Cummins.jpg',
     coverimage: 'Images/Cumminscover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Mithali Raj',
@@ -57,6 +67,8 @@ const Userdata=[
     image: 'Images/Mithali.jpg',
     coverimage: 'Images/Mithalicover.jpg',
     gender: 'women',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Smriti Mandhana',
@@ -66,6 +78,8 @@ const Userdata=[
     image: 'Images/Smriti.jpg',
     coverimage: 'Images/Smriticover1.jpg',
     gender: 'women',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Harman Preet Kaur',
@@ -75,6 +89,8 @@ const Userdata=[
     image: 'Images/Harman.jpg',
     coverimage: 'Images/Harmancover.jpg',
     gender: 'women',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Kane Williamson',
@@ -84,6 +100,8 @@ const Userdata=[
     image: 'Images/Williamson.jpg',
     coverimage: 'Images/Williamsoncover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Ben Stokes',
@@ -93,6 +111,8 @@ const Userdata=[
     image: 'Images/Stokes.jpg',
     coverimage: 'Images/Stokescover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Jasprit Bumrah',
@@ -102,6 +122,8 @@ const Userdata=[
     image: 'Images/Bumrah.jpg',
     coverimage: 'Images/Bumrahcover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Kieron Pollard',
@@ -111,6 +133,8 @@ const Userdata=[
     image: 'Images/Pollard.jpg',
     coverimage: 'Images/Pollardcover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Hardik Pandya',
@@ -120,6 +144,8 @@ const Userdata=[
     image: 'Images/Hardik.jpg',
     coverimage: 'Images/Hardikcover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Meg Lanning',
@@ -129,6 +155,8 @@ const Userdata=[
     image: 'Images/Meg.jpg',
     coverimage: 'Images/Megcover.jpg',
     gender: 'women',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'David Warner',
@@ -138,6 +166,8 @@ const Userdata=[
     image: 'Images/Warner.jpg',
     coverimage: 'Images/Warnercover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Trent Boult',
@@ -147,6 +177,8 @@ const Userdata=[
     image: 'Images/Boult.jpg',
     coverimage: 'Images/Boultcover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'James Anderson',
@@ -156,6 +188,8 @@ const Userdata=[
     image: 'Images/Anderson.jpg',
     coverimage: 'Images/Andersoncover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
 
   {
@@ -166,6 +200,8 @@ const Userdata=[
     image: 'Images/Smith.jpg',
     coverimage: 'Images/Smithcover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Sunil Narine',
@@ -175,6 +211,8 @@ const Userdata=[
     image: 'Images/Narine.jpg',
     coverimage: 'Images/Narinecover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Surya Kumar Yadav',
@@ -184,6 +222,8 @@ const Userdata=[
     image: 'Images/Sky.jpg',
     coverimage: 'Images/Skycover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Nicholas Pooran',
@@ -193,6 +233,8 @@ const Userdata=[
     image: 'Images/Pooran.jpg',
     coverimage: 'Images/Poorancover.jpg',
     gender: 'man',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Amelia Kerr',
@@ -202,6 +244,8 @@ const Userdata=[
     image: 'Images/Amelia.jpg',
     coverimage: 'Images/Ameliacover.jpg',
     gender: 'women',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
   {
     playername: 'Ellyse Perry',
@@ -211,6 +255,8 @@ const Userdata=[
     image: 'Images/Perry.jpg',
     coverimage: 'Images/Perrycover.jpg',
     gender: 'women',
+    facebook:"https://www.facebook.com/RohitSharmaOfficialPage/",
+    instagram:"https://www.instagram.com/rohitsharma45/?hl=en",
   },
 ]
 
@@ -241,6 +287,8 @@ export const UserCard = ({ filter, onMessageClick }) => {
           gender={user.gender}
           coverimage={user.coverimage}
           role={user.role}
+          facebook={user.facebook}
+          instagram={user.instagram}
           onMessageClick={onMessageClick}
         />
       ))}
